@@ -5,4 +5,21 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="TechJobsTests\JobTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="TechJobsTests\obj\TechJobsTests.csproj.nuget.g.targets" />
+    <None Remove="TechJobsTests\obj\project.nuget.cache" />
+    <None Remove="TechJobsTests\obj\TechJobsTests.csproj.nuget.dgspec.json" />
+    <None Remove="TechJobsTests\obj\project.assets.json" />
+    <None Remove="TechJobsTests\obj\TechJobsTests.csproj.nuget.g.props" />
+    <None Remove="TechJobsTests\obj\Debug\netcoreapp3.1\TechJobsTests.csprojAssemblyReference.cache" />
+    <None Remove="TechJobsTests\obj\Debug\netcoreapp3.1\TechJobsTests.assets.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="TechJobsTests\TechJobsTests.csproj">
+      <IncludeInPackage>true</IncludeInPackage>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

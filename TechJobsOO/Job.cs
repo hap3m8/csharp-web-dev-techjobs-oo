@@ -22,18 +22,17 @@ namespace TechJobsOO
             nextId++;
         }
 
-        public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency) : this()
+        public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency)
         {
             Name = name;
             EmployerName = employerName;
             EmployerLocation = employerLocation;
             JobType = jobType;
             JobCoreCompetency = jobCoreCompetency;
+            Id = nextId;
+            nextId++;
 
         }
-
-
-        // TODO: Generate Equals() and GetHashCode() methods.
 
         public override bool Equals(object obj)
         {
@@ -45,6 +44,8 @@ namespace TechJobsOO
         {
             return HashCode.Combine(Id);
         }
+
+        // TODO: Generate Equals() and GetHashCode() methods.
 
         public override string ToString()
         {
